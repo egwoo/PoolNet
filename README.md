@@ -2,6 +2,20 @@
 
 ### This is a PyTorch implementation of our CVPR 2019 [paper](https://arxiv.org/abs/1904.09569).
 
+```
+docker build -t poolnet .
+```
+
+Dev
+```
+docker run --gpus all --shm-size 8G -p 6000:5000 --rm -it -v $(pwd):/app --name poolnet poolnet bash
+```
+
+Prod
+```
+docker run --gpus all --shm-size 8G -p 6000:5000 --detach --name poolnet --rm poolnet
+```
+
 ## Prerequisites
 
 - [Pytorch 0.4.1+](http://pytorch.org/)
